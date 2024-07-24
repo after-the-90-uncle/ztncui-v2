@@ -3,7 +3,7 @@ import api from "@/api";
 import { Table, Space, Typography, Card } from "antd";
 const { Text, Link } = Typography;
 
-const Networks = () => {
+const Detail = () => {
   const [state, setState] = useState({
     reload: api.uid,
     dataSource: [],
@@ -14,10 +14,6 @@ const Networks = () => {
       total: 0,
     }
   });
-
-  useEffect(() => {
-
-  }, [])
 
   const toPage = ({ current, pageSize, total }) => {
     state.reload = api.uid;
@@ -30,14 +26,39 @@ const Networks = () => {
   function getColumns() {
     return [
       {
-        title: '网络名称',
-        dataIndex: '网络名称',
-        key: '网络名称',
+        title: '成员昵称',
+        dataIndex: '成员昵称',
+        key: '成员昵称',
       },
       {
-        title: '网络ID',
-        dataIndex: '网络ID',
-        key: '网络ID',
+        title: '成员ID',
+        dataIndex: '成员ID',
+        key: '成员ID',
+      },
+      {
+        title: '授权',
+        dataIndex: '授权',
+        key: '授权',
+      },
+      {
+        title: '桥接',
+        dataIndex: '桥接',
+        key: '桥接',
+      },
+      {
+        title: 'IP',
+        dataIndex: 'IP',
+        key: 'IP',
+      },
+      {
+        title: '状态',
+        dataIndex: '状态',
+        key: '状态',
+      },
+      {
+        title: '对等地址',
+        dataIndex: '对等地址',
+        key: '对等地址',
       },
       {
         title: '操作',
@@ -57,7 +78,7 @@ const Networks = () => {
 
   return (
     <div>
-      <Card title="网络列表">
+      <Card title="数链科技">
         <Table
           bordered
           loading={false}
@@ -70,10 +91,8 @@ const Networks = () => {
           pagination={state.pagination}
         />
       </Card>
-
     </div>
   )
 }
 
-
-export default Networks;
+export default Detail;

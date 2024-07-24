@@ -43,12 +43,12 @@ const ZTLayout = () => {
               label: '首页',
             },
             {
-              key: '/doaim',
+              key: '/domain',
               label: '域名配置',
             },
             {
               key: '/networks',
-              label: '局域网管理',
+              label: '网络管理',
             },
             {
               key: '/users',
